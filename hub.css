@@ -1,0 +1,113 @@
+/* Reset básico de margens e fundo escuro */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0d0d12; /* Um fundo bem escuro e profundo */
+    
+    /* Cria as linhas da grade: uma horizontal e uma vertical */
+    background-image: 
+        linear-gradient(rgba(180, 0, 255, 0.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(180, 0, 255, 0.15) 1px, transparent 1px);
+        
+    background-size: 40px 40px; /* Define o tamanho dos quadrados da grade */
+    
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.menu-container {
+    text-align: center;
+}
+
+/* Estilo do título "JOGOS" */
+.titulo-principal {
+    font-size: 3rem;
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+    border-bottom: 3px solid white;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Alinhamento horizontal dos 4 pilares */
+.pilares-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Espaço entre cada pilar */
+}
+
+/* Estilo individual de cada pilar/link */
+.pilar {
+    text-decoration: none; /* Tira o sublinhado do link */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease; /* Animação suave */
+}
+
+/* Efeito ao passar o mouse */
+.pilar:hover {
+    transform: translateY(-15px); /* Levanta o pilar ligeiramente */
+    cursor: pointer;
+}
+
+/* Estilo dos nomes em cima dos pilares */
+.nome-jogo {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* A mágica do formato geométrico */
+.hexagono {
+    width: 250px;
+    height: 500px;
+    
+    /* O clip-path desenha os 6 pontos do formato alongado */
+    clip-path: polygon(50% 0%, 100% 15%, 100% 85%, 50% 100%, 0% 85%, 0% 15%);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Configurações prontas para quando você colocar suas artes */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Ocultar o texto temporário assim que você tiver as imagens */
+.texto-temporario {
+    color: #1a1a1a;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+/* Cores temporárias de fundo (placeholders) */
+.pilar-vermelho { background-color: #ff3333; }
+.pilar-verde    { background-color: #2eb82e; }
+.pilar-azul     { background-color: #3333ff; }
+.pilar-amarelo  { background-color: #e6e600; }
+
+/*
+.pilar-vermelho {
+    background-image: url('art-jogo-1.png');
+}
+.pilar-verde{
+    background-image: url('art-jogo-2.png');
+}
+.pilar-azul{
+    background-image: url('art-jogo-3.png');
+}
+.pilar-amarelo{
+    background-image: url('art-jogo-4.png');
+}
+*/
