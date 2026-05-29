@@ -1,18 +1,21 @@
 /* ... seu reset básico com * fica igual ... */
 body {
-    display: flex;
-    flex-direction: column;
+    /* O truque do ../ para sair da pasta Jogo_two e entrar na imagem_site */
+    background-image: url('../imagem_site/Four knights apocalypse.png'); 
+    
+    /* AS REGRAS PARA A IMAGEM DESCER JUNTO COM A TELA: */
+    background-attachment: scroll; /* Garante que a imagem role junto com o scroll */
+    background-size: 100% auto; /* A largura ocupa 100% da tela, a altura desce o quanto precisar */
+    background-position: center top; /* Garante que você comece vendo o topo do desenho */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    
+    background-color: #000; /* Fundo preto caso a página seja ainda maior que o desenho */
+    color: white; /* Texto branco */
     min-height: 100vh;
     
-    /* O caminho da sua imagem continua igual */
-    background-image: url('../imagem_site/Four\ knights\ apocalypse.png'); 
-
-    /* Faz a largura da imagem preencher a tela inteira (100%), 
-       mas deixa a altura (auto) crescer naturalmente para baixo */
-    background-size: 100% auto; 
-    background-position: top center; /* Garante que a imagem comece colada no topo */
-    background-repeat: no-repeat; /* Evita que a imagem fique se repetindo se a página for maior que ela */
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .faixa {
