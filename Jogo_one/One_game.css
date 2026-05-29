@@ -1,57 +1,48 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+/* ... seu reset básico com * fica igual ... */
 
 body {
-    /* Faz o body ocupar 100% da altura da tela (100vh) */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    
+    /* --- AS NOVAS REGRAS DE FUNDO --- */
+    background-image: url('../imagem_site/wallpaper_one_game_menu.png'); /* O nome exato do seu desenho */
+    background-size: cover; /* Faz a imagem cobrir a tela inteira sem achatar */
+    background-position: center; /* Centraliza a arte */
+    background-attachment: fixed; /* Se a página rolar, o fundo fica travado no lugar */
 }
 
-/* Configuração base para todas as 3 faixas */
 .faixa {
-    flex: 1; /* Isso divide a tela igualmente em 3 partes */
+    flex: 1;
     display: flex;
-    flex-direction: column; /* Coloca o título em cima do texto */
-    justify-content: center; /* Centraliza verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 40px 20px;
     text-align: center;
-    color: #111; /* Texto bem escuro */
+    
+    /* --- O TRUQUE PARA LER O TEXTO --- */
+    /* Cria um fundo preto com 60% de transparência para dar destaque às letras */
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: #ffffff; /* Muda o texto para branco para contrastar */
+    
+    /* Uma linha bem sutil apenas para separar as seções, se quiser pode apagar */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
-/* Estilo dos Títulos (Prévia, Sobre, etc) */
+/* O resto do código continua igual */
 .faixa h2 {
     font-size: 3rem;
     text-transform: uppercase;
     margin-bottom: 20px;
     letter-spacing: 3px;
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Uma fonte mais despojada parecida com seu rascunho, depois podemos mudar */
+    font-family: 'Comic Sans MS', cursive, sans-serif; 
 }
 
-/* Estilo do Texto */
 .faixa p {
     font-size: 1.2rem;
-    max-width: 800px; /* Impede que o texto fique comprido demais no monitor */
+    max-width: 800px;
     line-height: 1.6;
-}
-
-/* --- As Cores de Fundo do seu Rascunho --- */
-.previa {
-    background-color: #cccccc; /* Cinza */
-}
-
-.sobre {
-    background-color: #ffb6c1; /* Rosa claro */
-}
-
-.algo-assim {
-    background-color: #ffff00; /* Amarelo */
 }
 
 /* --- O Botão da Wiki --- */
@@ -59,7 +50,20 @@ body {
     margin-top: 30px;
     padding: 15px 40px;
     background-color: #111; /* Fundo preto do botão */
-    color: white; /* Texto branco */
+    color: rgb(0, 255, 13); /* Texto verde */
+    text-decoration: none; /* Tira o sublinhado do link */
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 8px; /* Deixa as bordas arredondadas */
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+}
+
+.botao-volta {
+    margin-top: 30px;
+    padding: 15px 40px;
+    background-color: #111; /* Fundo preto do botão */
+    color: rgb(255, 0, 0); /* Texto vermelho */
     text-decoration: none; /* Tira o sublinhado do link */
     font-size: 1.5rem;
     font-weight: bold;
@@ -70,6 +74,12 @@ body {
 
 /* Efeito ao passar o mouse no botão */
 .botao-wiki:hover {
+    background-color: #333;
+    transform: scale(1.05); /* Aumenta um pouquinho igual nos pilares */
+    cursor: pointer;
+}
+
+.botao-volta:hover {
     background-color: #333;
     transform: scale(1.05); /* Aumenta um pouquinho igual nos pilares */
     cursor: pointer;
