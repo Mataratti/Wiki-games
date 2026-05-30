@@ -1,6 +1,7 @@
 /* ... seu reset básico com * fica igual ... */
 body {
-    background-image: url('../imagem_site/wallpaper_one_game_menu.png'); 
+    /* O truque do ../ para sair da pasta Jogo_two e entrar na imagem_site */
+    background-image: url('../imagem_site/medieval_campo_flores.png'); 
     
     /* AS REGRAS PARA A IMAGEM DESCER JUNTO COM A TELA: */
     background-attachment: scroll; /* Garante que a imagem role junto com o scroll */
@@ -35,6 +36,7 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
+/* O resto do código continua igual */
 .faixa h2 {
     font-size: 3rem;
     text-transform: uppercase;
