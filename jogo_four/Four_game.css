@@ -1,7 +1,7 @@
 /* ... seu reset básico com * fica igual ... */
 body {
     /* O truque do ../ para sair da pasta Jogo_two e entrar na imagem_site */
-    background-image: url('../imagem_site/Images/Background_images/medieval_campo_flores.png'); 
+    background-image: url('../imagem_site/Images/Background_images/Button_eye.png'); 
     
     /* AS REGRAS PARA A IMAGEM DESCER JUNTO COM A TELA: */
     background-attachment: scroll; /* Garante que a imagem role junto com o scroll */

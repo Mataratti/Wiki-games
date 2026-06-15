@@ -1,7 +1,7 @@
 /* ... seu reset básico com * fica igual ... */
 body {
     /* O truque do ../ para sair da pasta Jogo_two e entrar na imagem_site */
-    background-image: url('../imagem_site/Four knights apocalypse.png'); 
+    background-image: url('../imagem_site/Images/Background_images/Four_knights_apocalypse.png'); 
     
     /* AS REGRAS PARA A IMAGEM DESCER JUNTO COM A TELA: */
     background-attachment: scroll; /* Garante que a imagem role junto com o scroll */

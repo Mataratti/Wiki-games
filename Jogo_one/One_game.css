@@ -1,6 +1,6 @@
 /* ... seu reset básico com * fica igual ... */
 body {
-    background-image: url('../imagem_site/wallpaper_one_game_menu.png'); 
+    background-image: url('../imagem_site/Images/Background_images/wallpaper_one_game_menu.png'); 
     
     /* AS REGRAS PARA A IMAGEM DESCER JUNTO COM A TELA: */
     background-attachment: scroll; /* Garante que a imagem role junto com o scroll */
