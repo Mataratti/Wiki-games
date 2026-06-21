@@ -91,23 +91,23 @@ body {
     opacity: 0.5;
 }
 
-/* Cores temporárias de fundo (placeholders) */
+/* Cores temporárias de fundo (placeholders)
 .pilar-verde { background-color: #ff3333; }
 .pilar-vermelho    { background-color: #2eb82e; }
 .pilar-azul     { background-color: #e6e600; }
 .pilar-amarelo  { background-color: #3333ff; }
+*/
 
-/*
+
 .pilar-vermelho {
-    background-image: url('art-jogo-1.png');
+    background-image: url('imagem_site/Images/Background_images/wallpaper_one_game_menu.png');
 }
 .pilar-verde{
-    background-image: url('art-jogo-2.png');
+    background-image: url('imagem_site/Images/Background_images/Four_knights_apocalypse.png');
 }
 .pilar-azul{
-    background-image: url('art-jogo-3.png');
+    background-image: url('imagem_site/Images/Background_images/medieval_campo_flores.png');
 }
 .pilar-amarelo{
-    background-image: url('art-jogo-4.png');
+    background-image: url('imagem_site/Images/Background_images/Button_eye.png');
 }
-*/

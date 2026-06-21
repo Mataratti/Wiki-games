@@ -1,0 +1,129 @@
+/* Garante que o conteúdo não fique sobreposto pelo cabeçalho */
+main.boss-list {
+    width: 90%;
+    max-width: 1000px;
+    margin-top: 20px;
+    padding-top: 70px; /* Adiciona espaço para o cabeçalho fixo, se for o caso */
+    padding-bottom: 50px;
+}
+
+/* --- Estilo Base de Cada Bloco de Boss --- */
+.boss-entry {
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.boss-name {
+    font-size: 2.5em;
+    border-bottom: 2px solid #cc0000;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* --- Tema Alternado --- */
+
+/* Tema CINZA ESCURO (data-theme="dark") */
+.boss-entry[data-theme="dark"] {
+    background-color: #333333;
+    color: #e0e0e0;
+}
+
+/* Tema CINZA CLARO (data-theme="light") */
+.boss-entry[data-theme="light"] {
+    background-color: #f0f0f09c;
+    color: #333333;
+}
+
+/* --- Layout da Informação Principal (Foto + Status) --- */
+.boss-header-info {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.boss-image {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 3px solid #cc0000;
+}
+
+.status-box {
+    width: 60%;
+    border-left: 5px solid #cc0000;
+    padding-left: 20px;
+}
+.status-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* --- Acordeão (Abas) --- */
+.accordion {
+    margin-top: 15px;
+}
+
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    background-color: #cc0000;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.2s;
+    font-weight: bold;
+    /* Adiciona uma seta/ícone para indicar que é um acordeão (opcional) */
+}
+
+.accordion-header:hover {
+    background-color: #ff5555;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 0 20px;
+    border-radius: 0 0 5px 5px;
+}
+
+.accordion-content.active {
+    max-height: 500px;
+    padding: 20px;
+    padding-top: 10px;
+}
+
+/* Botão Voltar */
+.back-button {
+    text-decoration: none;
+    color: #cc0000;
+    font-size: 1.2em;
+    font-weight: bold;
+    grid-column: 1;
+    text-align: left;
+}
+
+/* Responsividade: Para telas menores, empilha a imagem e o status */
+@media (max-width: 600px) {
+    .boss-header-info {
+        flex-direction: column;
+    }
+    .boss-image, .status-box {
+        width: 100%;
+        padding-left: 0;
+        border-left: none;
+    }
+    .status-box {
+        border-top: 3px solid #cc0000;
+        padding-top: 15px;
+    }
+}
