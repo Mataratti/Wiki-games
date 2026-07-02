@@ -1,44 +1,94 @@
-/* Garante que o conteúdo não fique sobreposto pelo cabeçalho */
+/* ==========================================================================
+   1. ESTILO GLOBAL DA PÁGINA
+   ========================================================================== */
+body {
+    background-color: #111111; /* Fundo bem escuro */
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO E MENU SUPERIOR
+   ========================================================================== */
+.cabecalho {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 20px 50px;
+    margin-bottom: 30px;
+}
+
+.back-button {
+    text-decoration: none;
+    color: #cc0000;
+    font-size: 1.2em;
+    font-weight: bold;
+    justify-self: start;
+    transition: color 0.2s;
+}
+
+.back-button:hover {
+    color: #ff5555;
+}
+
+.cabecalho h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #ffffff;
+    letter-spacing: 5px;
+    justify-self: center;
+}
+
+.menu-icone {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    justify-self: end;
+}
+
+.menu-icone .linha {
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    transition: 0.3s;
+}
+
+/* Esconde a lista de links azuis da foto, transformando num menu invisível por enquanto */
+.side-menu {
+    display: none; 
+}
+
+/* ==========================================================================
+   3. CARTÕES DOS CHEFÕES (A Caixa Cinza)
+   ========================================================================== */
 main.boss-list {
+    margin: 0 auto;
     width: 90%;
-    max-width: 1000px;
-    margin-top: 20px;
-    padding-top: 70px; /* Adiciona espaço para o cabeçalho fixo, se for o caso */
+    max-width: 900px; /* Mantém o tamanho da sua foto de referência */
     padding-bottom: 50px;
 }
 
-/* --- Estilo Base de Cada Bloco de Boss --- */
 .boss-entry {
-    margin-bottom: 30px;
+    background-color: #333333; /* Fundo cinza do card */
+    margin-bottom: 40px;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .boss-name {
-    font-size: 2.5em;
-    border-bottom: 2px solid #cc0000;
-    padding-bottom: 10px;
+    font-size: 2.2rem;
+    color: #ffffff;
+    border-bottom: 1px solid #555; /* Linha sutil separando o título */
+    padding-bottom: 15px;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
-/* --- Tema Alternado --- */
-
-/* Tema CINZA ESCURO (data-theme="dark") */
-.boss-entry[data-theme="dark"] {
-    background-color: #333333;
-    color: #e0e0e0;
-}
-
-/* Tema CINZA CLARO (data-theme="light") */
-.boss-entry[data-theme="light"] {
-    background-color: #f0f0f09c;
-    color: #333333;
-}
-
-/* --- Layout da Informação Principal (Foto + Status) --- */
+/* Layout da Foto e Status Lado a Lado */
 .boss-header-info {
     display: flex;
     gap: 30px;
@@ -46,24 +96,33 @@ main.boss-list {
 }
 
 .boss-image {
-    width: 40%;
+    width: 45%; /* Metade do espaço para a foto */
     height: auto;
     object-fit: cover;
     border-radius: 6px;
-    border: 3px solid #cc0000;
+    border: 2px solid #cc0000; /* Bordinha vermelha na foto */
 }
 
 .status-box {
-    width: 60%;
-    border-left: 5px solid #cc0000;
+    width: 55%;
+    border-left: 3px solid #cc0000; /* Linha vermelha separando os status */
     padding-left: 20px;
 }
-.status-box ul {
-    list-style: none;
-    padding: 0;
+
+.status-box h3 {
+    margin-top: 0;
+    color: #ffffff;
 }
 
-/* --- Acordeão (Abas) --- */
+.status-box ul {
+    list-style: none; /* Tira as bolinhas */
+    padding: 0;
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   4. ACORDEÃO (Os botões Vermelhos que abrem e fecham)
+   ========================================================================== */
 .accordion {
     margin-top: 15px;
 }
@@ -78,52 +137,44 @@ main.boss-list {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.1em;
-    transition: background-color 0.2s;
     font-weight: bold;
-    /* Adiciona uma seta/ícone para indicar que é um acordeão (opcional) */
+    transition: background-color 0.3s, border-radius 0.3s;
 }
 
-.accordion-header:hover {
-    background-color: #ff5555;
+.accordion-header:hover, 
+.accordion-header.ativo {
+    background-color: #ff5e5e; /* Fica mais claro ao passar o mouse ou clicar */
+}
+
+.accordion-header.ativo {
+    border-radius: 5px 5px 0 0; /* Deixa a base reta quando abre */
 }
 
 .accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s;
-    background-color: rgba(0, 0, 0, 0.05);
-    padding: 0 20px;
+    max-height: 0; 
+    overflow: hidden; 
+    background-color: #262626; /* Um cinza um pouco mais escuro que o card */
+    color: #e0e0e0;
+    transition: max-height 0.4s ease-in-out, padding 0.4s;
     border-radius: 0 0 5px 5px;
 }
 
-.accordion-content.active {
-    max-height: 500px;
+.accordion-content.aberto {
     padding: 20px;
-    padding-top: 10px;
 }
 
-/* Botão Voltar */
-.back-button {
-    text-decoration: none;
-    color: #cc0000;
-    font-size: 1.2em;
-    font-weight: bold;
-    grid-column: 1;
-    text-align: left;
-}
-
-/* Responsividade: Para telas menores, empilha a imagem e o status */
-@media (max-width: 600px) {
+/* Responsividade para celular */
+@media (max-width: 700px) {
     .boss-header-info {
         flex-direction: column;
     }
     .boss-image, .status-box {
         width: 100%;
-        padding-left: 0;
         border-left: none;
+        padding-left: 0;
     }
     .status-box {
         border-top: 3px solid #cc0000;
-        padding-top: 15px;
+        padding-top: 20px;
     }
 }
