@@ -1,0 +1,99 @@
+/* Container que ocupa a largura da tela */
+.enemies-container {
+    padding-top: 80px; /* Espaço para o header */
+    width: 100%;
+}
+
+
+/* Blocos de Inimigos */
+.enemy-entry {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Alternância de cores de fundo conforme sua solicitação */
+.enemy-entry[data-bg="grey"] {
+    background-color: #2e2e2e; /* Cinza escuro */
+}
+
+
+.enemy-entry[data-bg="white"] {
+    background-color: #ffffff; /* Branco */
+}
+
+
+/* Alinhamento interno: Imagem à esquerda, Texto à direita */
+.enemy-content {
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+/* Quadrado da Imagem */
+.enemy-image-box {
+    width: 200px;
+    height: 200px;
+    background-color: #000; /* Fundo preto caso a imagem não preencha */
+    border: 3px solid #cc0000; /* Borda vermelha para combinar com o tema */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0; /* Impede o quadrado de esmagar */
+}
+
+
+.enemy-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a foto preencha o quadrado sem distorcer */
+}
+
+
+/* Textos */
+.enemy-main-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+
+/* Se o fundo for cinza, o título do nome é branco. Se for branco, o título é preto. */
+.enemy-entry[data-bg="grey"] .enemy-main-title { color: #fff; }
+.enemy-entry[data-bg="white"] .enemy-main-title { color: #000; }
+
+
+/* LINHAS EM VERMELHO (Títulos) */
+.label-red {
+    color: #ff0000;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+
+/* LINHAS EM AMARELO (Descrições) */
+.desc-yellow {
+    color: #ffcc00; /* Amarelo visível em ambos os fundos */
+    font-size: 1.1rem;
+}
+
+
+/* Responsividade para celular */
+@media (max-width: 768px) {
+    .enemy-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .enemy-image-box {
+        width: 150px;
+        height: 150px;
+    }
+}
+
