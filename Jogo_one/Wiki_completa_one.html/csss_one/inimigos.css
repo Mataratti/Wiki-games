@@ -40,7 +40,7 @@
     width: 200px;
     height: 200px;
     background-color: #000; /* Fundo preto caso a imagem não preencha */
-    border: 3px solid #cc0000; /* Borda vermelha para combinar com o tema */
+    border: 3px solid #0014cc; /* Borda vermelha para combinar com o tema */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,8 +70,15 @@
 
 
 /* LINHAS EM VERMELHO (Títulos) */
-.label-red {
-    color: #ff0000;
+.label-black {
+    color: #030303;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.label-white {
+    color: #ffffff;
     font-weight: bold;
     display: inline-block;
     margin-right: 5px;
@@ -79,8 +86,13 @@
 
 
 /* LINHAS EM AMARELO (Descrições) */
-.desc-yellow {
-    color: #ffcc00; /* Amarelo visível em ambos os fundos */
+.desc-white {
+    color: #ffffff; /* Amarelo visível em ambos os fundos */
+    font-size: 1.1rem;
+}
+
+.desc-black {
+    color: #000000; /* Amarelo visível em ambos os fundos */
     font-size: 1.1rem;
 }
 
