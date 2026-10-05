@@ -1,0 +1,94 @@
+/* --- CONTAINER PRINCIPAL (ESTICA QUASE A TELA TODA) --- */
+.weapons-container {
+    width: 95%;
+    max-width: 1800px;
+    margin: 30px auto;
+    padding: 0;
+}
+
+/* --- TÍTULO DA CATEGORIA PRINCIPAL --- */
+.category-title {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 8px;
+}
+
+/* --- A CAIXA MARROM DE FUNDO --- */
+.category-box {
+    background-color: #2b2320; /* Fundo marrom escuro estilo Terraria */
+    border: 1px solid #4a3b35; /* Borda marrom */
+    border-radius: 8px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+/* --- BARRA DAS SUBCATEGORIAS --- */
+.subcategory-header {
+    background-color: #3b2e29; /* Fundo marrom mais claro */
+    color: #d1c2b7;
+    font-size: 1.05rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-top: 1px solid #4a3b35;
+    border-bottom: 1px solid #4a3b35;
+}
+
+.category-box .subcategory-header:first-child {
+    border-top: none;
+}
+
+/* --- GRADE FIXA EM 4 COLUNAS --- */
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas / fileiras lado a lado */
+    gap: 12px;
+    padding: 20px; /* Espaçamento interno para os itens não colarem na borda */
+}
+
+/* --- CARD DA ARMA --- */
+.item-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    background-color: rgba(0, 0, 0, 0.25); /* Fundo preto transparente do item */
+    border: 1px solid #3d312a;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.item-card:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: #665247;
+}
+
+.item-card img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.item-card span {
+    color: #61b3ff; /* Azul da wiki */
+    font-size: 0.95rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* --- AJUSTE PARA TELAS MENORES (NOTEBOOKS E CELULARES) --- */
+@media (max-width: 1100px) {
+    .items-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .items-grid {
+        grid-template-columns: 1fr;
+    }
+}
