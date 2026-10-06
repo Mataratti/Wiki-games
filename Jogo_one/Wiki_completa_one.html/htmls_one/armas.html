@@ -23,17 +23,47 @@
 
     <main class="weapons-container">
 
+        <!-- CAIXA INFORMATIVA DE NÍVEIS -->
+        <section class="levels-info-box">
+            <h2>Níveis</h2>
+            <p>Cada classe terá especialidades, algumas serão mais resistentes, outras mais rápidas, cada uma com a sua peculiaridade, e essas peculiaridades irão fortalecer ou ajudar o usuário dependendo da arma ou item que deseja utilizar.</p>
+            <p>Cada um terá um nível de perícia com tais tipos de armas, e esses níveis de perícia são:</p>
+
+            <div class="levels-list">
+                <div class="level-item">
+                    <span class="badge badge-maior">Maior</span>
+                    <span class="arrow">&rarr;</span>
+                    <span>São armas que o usuário consegue +50% de dano a mais usando elas</span>
+                </div>
+                <div class="level-item">
+                    <span class="badge badge-medio">Médio</span>
+                    <span class="arrow">&rarr;</span>
+                    <span>São armas que o usuário consegue +25% de dano usando elas</span>
+                </div>
+                <div class="level-item">
+                    <span class="badge badge-normal">Normal</span>
+                    <span class="arrow">&rarr;</span>
+                    <span>São armas que o usuário não tem nenhum buff ou debuff</span>
+                </div>
+                <div class="level-item">
+                    <span class="badge badge-baixo">Baixo</span>
+                    <span class="arrow">&rarr;</span>
+                    <span>São armas que o usuário tem -30% de dano ou +30% de lentidão utilizando elas</span>
+                </div>
+            </div>
+        </section>
+
         <!-- CATEGORIA 1: ARMAS MÁGICAS -->
         <section class="weapon-category">
-            <h2 class="category-title">Armas Mágicas</h2>
+            <h2 class="category-title">Armas Leves</h2>
             
             <div class="category-box">
                 <!-- SUBCATEGORIA 1 -->
-                <div class="subcategory-header">Armas Mágicas de Início de Jogo</div>
+                <div class="subcategory-header">Armas leves de nível baixo </div>
                 <div class="items-grid">
                     <a href="#" class="item-card">
-                        <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Aquela_mãe.jpg" alt="Pistola Mágica">
-                        <span>Pistola Mágica</span>
+                        <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Aquela_mãe.jpg" alt="Adaga">
+                        <span>Adaga</span>
                     </a>
                     <a href="#" class="item-card">
                         <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Doutor_do_reino.jpg" alt="Arma Espacial">
@@ -46,7 +76,7 @@
                 </div>
 
                 <!-- SUBCATEGORIA 2 -->
-                <div class="subcategory-header">Armas Mágicas Avançadas</div>
+                <div class="subcategory-header">Armas leves de nível Alto</div>
                 <div class="items-grid">
                     <a href="#" class="item-card">
                         <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Mãe_Lunar.png" alt="Rifle Laser">
@@ -64,13 +94,14 @@
             </div>
         </section>
 
+
         <!-- CATEGORIA 2: LIVROS DE FEITIÇO -->
         <section class="weapon-category">
-            <h2 class="category-title">Livros de Feitiço</h2>
+            <h2 class="category-title">Armas Medias</h2>
 
             <div class="category-box">
                 <!-- SUBCATEGORIA 1 -->
-                <div class="subcategory-header">Livros Básicos</div>
+                <div class="subcategory-header">Armas medias com baixo nível</div>
                 <div class="items-grid">
                     <a href="#" class="item-card">
                         <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Quimera_sedenta.jpg" alt="Feitiço d'Água">
@@ -83,7 +114,7 @@
                 </div>
 
                 <!-- SUBCATEGORIA 2 -->
-                <div class="subcategory-header">Livros Avançados</div>
+                <div class="subcategory-header">Armas medias com alto nível</div>
                 <div class="items-grid">
                     <a href="#" class="item-card">
                         <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Sentinela_dos_mares.jpg" alt="Chamas Malditas">
@@ -97,6 +128,141 @@
             </div>
         </section>
 
+
+        <!-- CATEGORIA 3: LIVROS DE FEITIÇO -->
+        <section class="weapon-category">
+            <h2 class="category-title">Armas Grandes</h2>
+
+            <div class="category-box">
+                <!-- SUBCATEGORIA 1 -->
+                <div class="subcategory-header">Armas grandes com baixo nível</div>
+                <div class="items-grid">
+                    <a href="#" class="item-card">
+                        <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Quimera_sedenta.jpg" alt="Feitiço d'Água">
+                        <span>Feitiço d'Água</span>
+                    </a>
+                    <a href="#" class="item-card">
+                        <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Rei_dos_corvos.jpg" alt="Livro de Crânios">
+                        <span>Livro de Crânios</span>
+                    </a>
+                </div>
+
+                <!-- SUBCATEGORIA 2 -->
+                <div class="subcategory-header">Armas grandes com alto nível</div>
+                <div class="items-grid">
+                    <a href="#" class="item-card">
+                        <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Sentinela_dos_mares.jpg" alt="Chamas Malditas">
+                        <span>Chamas Malditas</span>
+                    </a>
+                    <a href="#" class="item-card">
+                        <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Terror_dos_mares.jpg" alt="Chuva de Cristal">
+                        <span>Chuva de Cristal</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CATEGORIA 2: LIVROS DE FEITIÇO -->
+        <section class="weapon-category">
+            <h2 class="category-title">Armas Magicas</h2>
+
+            <div class="category-box">
+                <!-- SUBCATEGORIA 1 -->
+                <div class="subcategory-header">Armas magicas com baixo nível</div>
+                <div class="items-grid">
+                    <a href="#" class="item-card">
+                        <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Quimera_sedenta.jpg" alt="Feitiço d'Água">
+                        <span>Feitiço d'Água</span>
+                    </a>
+                    <a href="#" class="item-card">
+                        <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Rei_dos_corvos.jpg" alt="Livro de Crânios">
+                        <span>Livro de Crânios</span>
+                    </a>
+                </div>
+
+                <!-- SUBCATEGORIA 2 -->
+                <div class="subcategory-header">Armas magicas com alto nível</div>
+                <div class="items-grid">
+                    <a href="#" class="item-card">
+                        <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Sentinela_dos_mares.jpg" alt="Chamas Malditas">
+                        <span>Chamas Malditas</span>
+                    </a>
+                    <a href="#" class="item-card">
+                        <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Terror_dos_mares.jpg" alt="Chuva de Cristal">
+                        <span>Chuva de Cristal</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CATEGORIA 2: LIVROS DE FEITIÇO -->
+        <section class="weapon-category">
+            <h2 class="category-title">Armas Longo alcançe</h2>
+
+            <div class="category-box">
+                <!-- SUBCATEGORIA 1 -->
+                <div class="subcategory-header">Armas medias com baixo nível</div>
+                <div class="items-grid">
+                    <a href="#" class="item-card">
+                        <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Quimera_sedenta.jpg" alt="Feitiço d'Água">
+                        <span>Feitiço d'Água</span>
+                    </a>
+                    <a href="#" class="item-card">
+                        <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Rei_dos_corvos.jpg" alt="Livro de Crânios">
+                        <span>Livro de Crânios</span>
+                    </a>
+                </div>
+
+                <!-- SUBCATEGORIA 2 -->
+                <div class="subcategory-header">Armas medias com alto nível</div>
+                <div class="items-grid">
+                    <a href="#" class="item-card">
+                        <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Sentinela_dos_mares.jpg" alt="Chamas Malditas">
+                        <span>Chamas Malditas</span>
+                    </a>
+                    <a href="#" class="item-card">
+                        <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Terror_dos_mares.jpg" alt="Chuva de Cristal">
+                        <span>Chuva de Cristal</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CATEGORIA 2: LIVROS DE FEITIÇO -->
+        <section class="weapon-category">
+            <h2 class="category-title">Armas de Invocador</h2>
+
+            <div class="category-box">
+                <!-- SUBCATEGORIA 1 -->
+                <div class="subcategory-header">Armas summoner com baixo nível</div>
+                <div class="items-grid">
+                    <a href="#" class="item-card">
+                        <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Quimera_sedenta.jpg" alt="Feitiço d'Água">
+                        <span>Feitiço d'Água</span>
+                    </a>
+                    <a href="#" class="item-card">
+                        <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Rei_dos_corvos.jpg" alt="Livro de Crânios">
+                        <span>Livro de Crânios</span>
+                    </a>
+                </div>
+
+                <!-- SUBCATEGORIA 2 -->
+                <div class="subcategory-header">Armas summoner com alto nível</div>
+                <div class="items-grid">
+                    <a href="#" class="item-card">
+                        <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Sentinela_dos_mares.jpg" alt="Chamas Malditas">
+                        <span>Chamas Malditas</span>
+                    </a>
+                    <a href="#" class="item-card">
+                        <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Terror_dos_mares.jpg" alt="Chuva de Cristal">
+                        <span>Chuva de Cristal</span>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- JS Base Global + JS Específico de Armas -->

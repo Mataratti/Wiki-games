@@ -1,3 +1,87 @@
+/* --- CAIXA INFORMATIVA DE NÍVEIS --- */
+.levels-info-box {
+    background-color: #4a3b35;
+    border: 1px solid #333333;
+    border-radius: 12px;
+    padding: 30px 25px;
+    margin-bottom: 35px;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.levels-info-box h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.levels-info-box p {
+    font-size: 0.98rem;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    color: #cccccc;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* LISTA DOS NÍVEIS */
+.levels-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.level-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: #ffffff;
+    flex-wrap: wrap;
+}
+
+.level-item .arrow {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* BADGES DE CORES */
+.badge {
+    font-weight: bold;
+    padding: 3px 12px;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    display: inline-block;
+    min-width: 65px;
+    text-align: center;
+}
+
+.badge-maior {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.badge-medio {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.badge-normal {
+    background-color: #d3d02b;
+    color: #ffffff;
+}
+
+.badge-baixo {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+
 /* --- CONTAINER PRINCIPAL (ESTICA QUASE A TELA TODA) --- */
 .weapons-container {
     width: 95%;
