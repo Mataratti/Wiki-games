@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 /* --- CAIXA INFORMATIVA DE NÍVEIS --- */
 .levels-info-box {
     background-color: #4a3b35;
@@ -175,4 +179,47 @@
     .items-grid {
         grid-template-columns: 1fr;
     }
+}
+/*DESCRIÇÃO DAS ARMAS*/
+/* Container Escuro da Região */
+.card-regiao {
+    background-color: #2b2b2b;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card-regiao h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* O Botão Azul (Summary) */
+.accordion-btn {
+    background-color: #007bff; /* Azul do botão */
+    color: #ffffff;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none; /* Esconde a setinha padrão do HTML */
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+.accordion-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Remove a setinha no Safari / Chrome antigo */
+.accordion-btn::-webkit-details-marker {
+    display: none;
+}
+
+/* Conteúdo que abre e fecha */
+.accordion-content {
+    padding: 15px 10px 5px 10px;
+    color: #cccccc;
+    line-height: 1.5;
 }
