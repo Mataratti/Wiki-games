@@ -1,9 +1,10 @@
-cd ..<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NPCs - Notas do Jogo</title>
+    <title>NPCs - Wiki</title>
+    <!-- CSS Base Global + CSS Específico de NPCs -->
     <link rel="stylesheet" href="../wiki_one_home.css">
     <link rel="stylesheet" href="../csss_one/npcs.css">
 </head>
@@ -11,7 +12,8 @@ cd ..<!DOCTYPE html>
 
     <header class="cabecalho">
         <a href="../wiki_one_home.html" class="back-button">← Voltar</a>
-        <h1>NPCs</h1>
+        <h1>NPCs & CHEFES</h1>
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
         <div class="menu-icone">
             <span class="linha"></span>
             <span class="linha"></span>
@@ -19,75 +21,106 @@ cd ..<!DOCTYPE html>
         </div>
     </header>
 
-    <main class="npc-list">
-       
-        <section class="npc-entry" data-theme="dark">
-            <h2 class="npc-name">FIlha Eclipse</h2> <div class="npc-image-container">
-                <img src="../imagens/imagens_npcs/filha_eclipse.jpg" alt="Foto do NPC" class="npc-photo"> </div>
+    <main class="npcs-container">
 
-
-            <div class="accordion">
-                <button class="accordion-header">História e Descrição</button>
-                <div class="accordion-content">
-                    <p class="branco-texto">
-                        Primogênita dos seres universais. Nasceu bela, porém não com tantos talentos quanto sua irmã. Ela se encontra em um mapa muito distante dos seus pais. O pq? (penso nisso depois). Será feito uma quest com ela e somente com ela é possível acabar com o evento do Eclipse. Mas a quest dela vai além disso. Uma garota a qual o Protagonista ira simpatizar (pq ele também tem uma filha). Será uma amiga para sua filha no fim do jogo, diferente de sua irmã ela não ajudara o protagonista contra o boss final, mas sim no caminhar dele para a volta pra casa.
-                    </p>
-                </div>
-            </div>
-
-            <div class="accordion">
-                <button class="accordion-header">Mapa que se encontra</button>
-                <div class="accordion-content">
-                    <p class="branco-texto">  </p>
-                </div>
-            </div>
-
-            <div class="accordion">
-                <button class="accordion-header">Papel no Jogo</button>
-                <div class="accordion-content">
-                    <p class="branco-texto"> Terá importância para o final bom do jogo </p>
-                </div>
-            </div>
+        <!-- INTRODUÇÃO DA PÁGINA -->
+        <section class="wiki-intro">
+            <h2>NPCs do Jogo</h2>
+            <p>
+                Os <strong>NPCs</strong> (Personagens Não Jogáveis) e <strong>Chefes</strong> são elementos fundamentais na progressão. Alguns fornecem serviços, trocas e abrigo, enquanto outros exigem itens específicos para serem invocados em batalha.
+            </p>
         </section>
 
-
-
-        <section class="npc-entry" data-theme="light">
-            <h2 class="npc-name">Filha Andromeda</h2>
-        
-            <div class="npc-image-container">
-                <img src="../imagens/imagens_npcs/filha_andromeda.jpg" alt="Foto da Capitã" class="npc-photo">
-            </div>
-
-            <div class="accordion">
-                <button class="accordion-header">História e Descrição</button>
-                <div class="accordion-content">
-                    <p class="preto-texto">
-                        Menina que nasceu com talento para absorver e se tornar um com algo. Imune a qualquer coisa (inclusive a doença). Tanto ela quanto sua irmã Eclipse são filhas do Pai Solar e da Mãe Lunar, porém Andromeda era considerada sua filha nascida perfeita. Ela pode ser encontrada após a derrota de seus pais, em uma sala secreta que só se mostra acessível após a derrota de sua mãe.
-                    </p>
+        <!-- CARD DE NPC / BOSS 1 -->
+        <article class="npc-card">
+            <!-- LADO ESQUERDO: TEXTO E DESCRIÇÃO -->
+            <div class="npc-info">
+                <h2 class="npc-title">Rei Slime</h2>
+                
+                <div class="npc-tip">
+                    <span>💡</span>
+                    <p><em>Para estratégias detalhadas de combate e arena recomendada, consulte o guia de bosses.</em></p>
                 </div>
+
+                <p class="npc-description">
+                    O <strong>Rei Slime</strong> é um grande slime gelatinoso com <strong>2.000 / 2.800 / 3.570</strong> de vida. Ele é invocado utilizando a <em>Coroa de Slime</em> ou após derrotar 150 slimes durante o evento de Chuva de Slime.
+                </p>
+
+                <p class="npc-description">
+                    Ele consegue se teleportar diretamente para a posição do jogador caso fique preso no cenário ou distante demais do seu alvo por muito tempo.
+                </p>
+
+                <p class="npc-description">
+                    Ao ser derrotado, ele pode soltar peças de armadura, moedas de ouro e itens temáticos gelatinosos.
+                </p>
             </div>
 
-            <div class="accordion">
-                <button class="accordion-header">Mapa que se encontra</button>
-                <div class="accordion-content">
-                    <p class="preto-texto"> Arquepelago Astral </p>
+            <!-- LADO DIREITO: INFOBOX FOTO + DADOS -->
+            <aside class="npc-infobox">
+                <div class="infobox-image-box">
+                    <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Aquela_mãe.jpg" alt="Rei Slime">
                 </div>
-            </div>
-
-            <div class="accordion">
-                <button class="accordion-header">Papel no Jogo</button>
-                <div class="accordion-content">
-                    <p class="preto-texto"> Terá importância para o final bom do jogo </p>
+                <div class="infobox-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Invocado com:</span>
+                        <span class="detail-value">
+                            <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Doutor_do_reino.jpg" alt="Item" class="mini-icon">
+                            Coroa de Slime
+                        </span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Música:</span>
+                        <span class="detail-value">King Slime 🔊</span>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </aside>
+        </article>
 
+        <!-- CARD DE NPC / BOSS 2 -->
+        <article class="npc-card">
+            <!-- LADO ESQUERDO: TEXTO E DESCRIÇÃO -->
+            <div class="npc-info">
+                <h2 class="npc-title">Olho de Cthulhu</h2>
+
+                <div class="npc-tip">
+                    <span>💡</span>
+                    <p><em>Utilize poções de agilidade e armas de longo alcance para a segunda fase.</em></p>
+                </div>
+
+                <p class="npc-description">
+                    O <strong>Olho de Cthulhu</strong> é um olho gigante voador com <strong>2.800 / 3.640 / 4.641</strong> de vida. Ele tem chance de surgir naturalmente no início de cada noite caso o jogador tenha mais de 200 de vida e 10 de defesa.
+                </p>
+
+                <p class="npc-description">
+                    Na sua segunda fase, ele remove a íris, revelando uma boca com dentes afiados e realizando investidas sequenciais extremamente rápidas.
+                </p>
+            </div>
+
+            <!-- LADO DIREITO: INFOBOX FOTO + DADOS -->
+            <aside class="npc-infobox">
+                <div class="infobox-image-box">
+                    <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Irmãos_Colapso.jpg" alt="Olho de Cthulhu">
+                </div>
+                <div class="infobox-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Invocado com:</span>
+                        <span class="detail-value">
+                            <img src="../../../imagem_site/Images/Game_one/bosses_imagens/Mãe_Lunar.png" alt="Item" class="mini-icon">
+                            Olho Suspeito
+                        </span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Música:</span>
+                        <span class="detail-value">Boss 1 🔊</span>
+                    </div>
+                </div>
+            </aside>
+        </article>
 
     </main>
 
-
-    <script src="../js/script.js"></script>
-    <script src="../js/bosses.js"></script> </body>
+    <!-- JS Base Global + JS Específico de NPCs -->
+    <script src="../wiki_one_home.js"></script>
+    <script src="../jss_one/npcs.js"></script>
+</body>
 </html>
-

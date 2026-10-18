@@ -1,81 +1,151 @@
-.npc-list {
-    padding-top: 100px;
-    padding-bottom: 50px;
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto;
+/* --- CONTAINER PRINCIPAL --- */
+.npcs-container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0;
 }
 
-
-.npc-entry {
-    margin-bottom: 40px;
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-}
-
-
-/* Temas Alternados */
-.npc-entry[data-theme="dark"] { background-color: #333; color: white; }
-.npc-entry[data-theme="light"] { background-color: #f0f0f0; color: #333; }
-
-
-/* Nome do NPC (Amarelo) */
-.npc-name {
-    color: #ffd700; /* Dourado/Amarelo */
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-
-/* Container da Foto (Quadrado Preto do desenho) */
-.npc-image-container {
-    background-color: #000; /* Fundo preto caso a imagem seja menor */
-    padding: 10px;
-    display: inline-block;
+/* INTRODUÇÃO DA PÁGINA */
+.wiki-intro {
+    background-color: #2b2320;
+    border: 1px solid #4a3b35;
     border-radius: 8px;
-    margin-bottom: 25px;
+    padding: 20px 25px;
+    margin-bottom: 30px;
+    color: #d1c2b7;
 }
 
-
-.npc-photo {
-    max-width: 100%;
-    height: auto; /* Mantém a proporção original da foto */
-    display: block;
-    border: 2px solid #555;
+.wiki-intro h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #4a3b35;
+    padding-bottom: 8px;
 }
 
-
-/* Cores das descrições conforme o desenho */
-.preto-texto { color: #000804; font-weight: 500; }
-.branco-texto { color: #ffffff; font-weight: 500; }
-
-
-/* Reutilizando estilos do Acordeão */
-.accordion { margin-top: 10px; }
-.accordion-header {
-    width: 100%;
-    background-color: #ffd700;
-    color: black;
-    padding: 15px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 5px;
+.wiki-intro p {
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
-
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    background-color: rgba(0,0,0,0.1);
-}
-
-
-.accordion-content.active {
-    max-height: 1000px;
+/* --- CARD GERAL DE CADA NPC / BOSS --- */
+.npc-card {
+    display: flex;
+    gap: 20px;
+    background-color: #2b2320; /* Fundo marrom no tom da sua wiki */
+    border: 1px solid #4a3b35;
+    border-radius: 8px;
     padding: 20px;
+    margin-bottom: 25px;
+    align-items: flex-start;
 }
 
+/* LADO ESQUERDO (TEXTO E INFORMAÇÕES) */
+.npc-info {
+    flex: 1; /* Ocupa todo o espaço restante disponível */
+}
+
+.npc-title {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #4a3b35;
+    padding-bottom: 6px;
+}
+
+.npc-tip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-left: 3px solid #61b3ff;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.9rem;
+    color: #b0c4de;
+}
+
+.npc-description {
+    color: #d1c2b7;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.npc-description strong {
+    color: #ffffff;
+}
+
+/* LADO DIREITO (INFOBOX DA IMAGEM E DADOS) */
+.npc-infobox {
+    width: 280px; /* Largura fixa da caixa de dados */
+    background-color: #1f1815;
+    border: 1px solid #4a3b35;
+    border-radius: 6px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.infobox-image-box {
+    background-color: #dedede; /* Quadrado claro de fundo para destacar o sprite */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 180px;
+}
+
+.infobox-image-box img {
+    max-width: 100%;
+    max-height: 160px;
+    object-fit: contain;
+}
+
+.infobox-details {
+    padding: 12px;
+    background-color: #1f1815;
+}
+
+.detail-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 10px;
+    font-size: 0.88rem;
+}
+
+.detail-row:last-child {
+    margin-bottom: 0;
+}
+
+.detail-label {
+    color: #a09085;
+    font-size: 0.82rem;
+}
+
+.detail-value {
+    color: #61b3ff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.mini-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+/* --- RESPONSIVIDADE PARA NOTEBOOKS MENORES E CELULARES --- */
+@media (max-width: 850px) {
+    .npc-card {
+        flex-direction: column-reverse; /* Coloca a infobox acima do texto em telas pequenas */
+    }
+
+    .npc-infobox {
+        width: 100%;
+    }
+}
