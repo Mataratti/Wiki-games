@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itens - Wiki</title>
+    <!-- CSS Base Global + CSS Específico de Itens -->
+    <link rel="stylesheet" href="../wiki_one_home.css">
+    <link rel="stylesheet" href="../csss_one/itens_one.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <a href="../../wiki_one_home.html" class="back-button">← Voltar</a>
+        <h1>ITENS</h1>
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
+        <div class="menu-icone">
+            <span class="linha"></span>
+            <span class="linha"></span>
+            <span class="linha"></span>
+        </div>
+    </header>
+
+    <main class="itens-container">
+
+        <!-- INTRODUÇÃO DA PÁGINA -->
+        <section class="wiki-intro">
+            <h2>Catálogo de Itens</h2>
+            <p>Clique em qualquer item da tabela abaixo para navegar diretamente para seus detalhes, localização e efeitos no final da página.</p>
+        </section>
+
+        <!-- TABELA EM GRADE DE ITENS (ESTILO TERRARIA) -->
+        <section class="category-box">
+            <div class="subcategory-header">Consumíveis & Acessórios</div>
+            
+            <div class="items-grid">
+                <!-- ITEM 1 (Link apontando para o ID da seção de detalhes) -->
+                <a href="#pocao-cura" class="item-card">
+                    <img src="../../../imagem_site/Images/Game_one/" alt="Poção de Cura">
+                    <span>Poção de Cura</span>
+                </a>
+
+                <!-- ITEM 2 -->
+                <a href="#anel-vida" class="item-card">
+                    <img src="../../../imagem_site/Images/Game_one/bosses_imagens/" alt="Anel da Vida">
+                    <span>Anel da Vida</span>
+                </a>
+
+                <!-- ITEM 3 -->
+                <a href="#amuleto-fogo" class="item-card">
+                    <img src="../../../imagem_site/Images/Game_one/bosses_imagens/" alt="Amuleto de Fogo">
+                    <span>Amuleto de Fogo</span>
+                </a>
+
+                <!-- ITEM 4 -->
+                <a href="#frasco-veneno" class="item-card">
+                    <img src="../../../imagem_site/Images/Game_one/bosses_imagens/" alt="Frasco de Veneno">
+                    <span>Frasco de Veneno</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE DETALHES DOS ITENS (AO FINAL DA PÁGINA) -->
+        <section class="details-section">
+            <h2 class="details-main-title">Detalhes dos Itens</h2>
+
+            <!-- CARD DE DETALHES ITEM 1 (ID idêntico ao href) -->
+            <article id="pocao-cura" class="item-detail-card">
+                <div class="item-header">
+                    <img src="../../../imagem_site/Images/Game_one/bosses_imagens/" alt="Poção de Cura">
+                    <h3>Poção de Cura</h3>
+                </div>
+                <div class="item-info-grid">
+                    <p><strong>Localização:</strong> Baús comuns, baús de masmorra ou vendida por comerciantes.</p>
+                    <p><strong>Efeitos:</strong> Restaura +100 HP instantaneamente.</p>
+                </div>
+                <p class="item-description">
+                    <strong>Descrição:</strong> Um frasco contendo um líquido vermelho brilhante que regenera ferimentos rapidamente em batalha.
+                </p>
+                <a href="#" class="back-to-top">▲ Voltar ao topo</a>
+            </article>
+
+            <!-- CARD DE DETALHES ITEM 2 -->
+            <article id="anel-vida" class="item-detail-card">
+                <div class="item-header">
+                    <img src="../../../imagem_site/Images/Game_one/bosses_imagens/" alt="Anel da Vida">
+                    <h3>Anel da Vida</h3>
+                </div>
+                <div class="item-info-grid">
+                    <p><strong>Localização:</strong> Recompensa da missão "O Ferreiro Perdido".</p>
+                    <p><strong>Efeitos:</strong> Aumenta a vida máxima em +50 e acelera a regeneração passiva.</p>
+                </div>
+                <p class="item-description">
+                    <strong>Descrição:</strong> Um anel banhado a ouro esculpido com runas antigas que emana uma energia vital constante.
+                </p>
+                <a href="#" class="back-to-top">▲ Voltar ao topo</a>
+            </article>
+
+            <!-- CARD DE DETALHES ITEM 3 -->
+            <article id="amuleto-fogo" class="item-detail-card">
+                <div class="item-header">
+                    <img src="../../../imagem_site/Images/Game_one/bosses_imagens/" alt="Amuleto de Fogo">
+                    <h3>Amuleto de Fogo</h3>
+                </div>
+                <div class="item-info-grid">
+                    <p><strong>Localização:</strong> Drop raro do Chefe de Lava.</p>
+                    <p><strong>Efeitos:</strong> Adiciona +15% de dano de fogo a todos os ataques físicos.</p>
+                </div>
+                <p class="item-description">
+                    <strong>Descrição:</strong> Um amuleto forjado no núcleo de um vulcão ativo. Quente ao toque.
+                </p>
+                <a href="#" class="back-to-top">▲ Voltar ao topo</a>
+            </article>
+
+            <!-- CARD DE DETALHES ITEM 4 -->
+            <article id="frasco-veneno" class="item-detail-card">
+                <div class="item-header">
+                    <img src="../../../imagem_site/Images/Game_one/bosses_imagens/" alt="Frasco de Veneno">
+                    <h3>Frasco de Veneno</h3>
+                </div>
+                <div class="item-info-grid">
+                    <p><strong>Localização:</strong> Criado na Bancada de Alquimia.</p>
+                    <p><strong>Efeitos:</strong> Aplica o efeito "Envenenamento" nos inimigos atingidos por 5 segundos.</p>
+                </div>
+                <p class="item-description">
+                    <strong>Descrição:</strong> Mistura altamente tóxica extraída de criaturas do pântano.
+                </p>
+                <a href="#" class="back-to-top">▲ Voltar ao topo</a>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- JS Base Global + JS Específico de Itens -->
+    <script src="../wiki_one_home.js"></script>
+    <script src="../jss_one/itens.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+/* ROLAGEM SUAVE PARA OS LINKS DE ÂNCORA */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- CONTAINER PRINCIPAL --- */
+.itens-container {
+    width: 95%;
+    max-width: 1800px;
+    margin: 30px auto;
+    padding: 0;
+}
+
+/* INTRODUÇÃO DA PÁGINA */
+.wiki-intro {
+    background-color: #2b2320;
+    border: 1px solid #4a3b35;
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin-bottom: 30px;
+    color: #d1c2b7;
+}
+
+.wiki-intro h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #4a3b35;
+    padding-bottom: 8px;
+}
+
+/* --- CAIXA E GRADE DE ITENS (ESTILO WIKI TERRARIA) --- */
+.category-box {
+    background-color: #2b2320;
+    border: 1px solid #4a3b35;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.subcategory-header {
+    background-color: #3b2e29;
+    color: #d1c2b7;
+    font-size: 1.05rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-bottom: 1px solid #4a3b35;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas fixas */
+    gap: 12px;
+    padding: 20px;
+}
+
+.item-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 1px solid #3d312a;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.item-card:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: #665247;
+}
+
+.item-card img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.item-card span {
+    color: #61b3ff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* --- SEÇÃO DE DETALHES (LISTA AO FINAL DA PÁGINA) --- */
+.details-section {
+    margin-top: 50px;
+}
+
+.details-main-title {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #4a3b35;
+    padding-bottom: 10px;
+}
+
+.item-detail-card {
+    background-color: #2b2320;
+    border: 1px solid #4a3b35;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    scroll-margin-top: 80px; /* Garante que o item não fique atrás do menu fixo ao rolar */
+}
+
+.item-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #3b2e29;
+    padding-bottom: 10px;
+}
+
+.item-header img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.item-header h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.item-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    color: #d1c2b7;
+}
+
+.item-info-grid strong {
+    color: #ffffff;
+}
+
+.item-description {
+    color: #d1c2b7;
+    line-height: 1.5;
+}
+
+.item-description strong {
+    color: #ffffff;
+}
+
+.back-to-top {
+    display: inline-block;
+    margin-top: 15px;
+    color: #61b3ff;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.back-to-top:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1100px) {
+    .items-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .items-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .item-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
