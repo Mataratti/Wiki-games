@@ -1,0 +1,189 @@
+/* Reset básico para garantir que os estilos fiquem consistentes */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f0f0f0; /* Fundo claro Padrão */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- Cabeçalho (JOGO e Ícone de Menu) --- */
+
+.cabecalho {
+    width: 90%;
+    max-width: 1200px;
+    /* Ajuste para centralizar o título e posicionar os botões nas laterais */
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* 1: Tema, 2: Título Central, 3: Menu */
+    align-items: center;
+    padding: 20px 0;
+}
+
+.cabecalho h1 {
+    grid-column: 2; /* Coloca o H1 na coluna central */
+    text-align: center; /* Centraliza o texto dentro da coluna */
+    font-size: 3em; 
+    letter-spacing: 5px;
+    margin: 0;
+}
+
+/* Estilo do Botão de Tema */
+.theme-toggle {
+    grid-column: 1; /* Coloca o switch na primeira coluna */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    padding: 0;
+    transition: color 0.3s;
+}
+
+/* Estilo para o ícone de menu (as 3 linhas no canto superior direito) */
+.menu-icone {
+    grid-column: 3; /* Coloca o menu na última coluna */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.menu-icone .linha {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333; /* Cor das linhas no modo claro */
+}
+
+/* --- Menu Lateral (Side Menu) --- */
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #222; 
+    padding-top: 60px; 
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    
+    transform: translateX(100%); /* Escondido por padrão */
+    transition: transform 0.3s ease-in-out; 
+    z-index: 100;
+}
+
+/* Classe ativada pelo JavaScript para mostrar o menu */
+.side-menu.active {
+    transform: translateX(0); /* Move para a posição visível */
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu li {
+    border-bottom: 1px solid #444; 
+}
+
+.side-menu a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    transition: background-color 0.2s;
+}
+
+.side-menu a:hover {
+    background-color: #cc0000;
+}
+
+/* --- Painel de Cards (Os Quadrados) --- */
+
+.painel-cards {
+    width: 90%;
+    max-width: 1000px; 
+    margin-top: 50px;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+}
+
+.card {
+    /* O "Quadrado Vermelho" */
+    background-color: #cc0000; 
+    color: white; 
+    border: 3px solid #ff5555; 
+    
+    padding: 20px;
+    min-height: 120px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none; 
+    border-radius: 8px; 
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s, border-color 0.3s;
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Query: Para telas menores */
+@media (max-width: 768px) {
+    .painel-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ======================================= */
+/* --- Regras do Tema Escuro (DARK MODE) --- */
+/* ======================================= */
+
+.dark-mode {
+    background-color: #121212; /* Fundo muito escuro */
+    color: #e0e0e0; /* Texto claro */
+}
+
+/* Elementos no Tema Escuro */
+.dark-mode .cabecalho h1 {
+    color: #e0e0e0;
+}
+
+.dark-mode .menu-icone .linha {
+    background-color: #e0e0e0; /* Linhas brancas/claras no modo escuro */
+}
+
+.dark-mode .card {
+    background-color: #4a0000; /* Vermelho escuro */
+    border-color: #720000; /* Borda mais escura */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .card:hover {
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode .side-menu {
+    background-color: #1f1f1f;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.8);
+}
+
+.dark-mode .side-menu a:hover {
+    background-color: #720000; /* Hover escuro */
+}

@@ -1,0 +1,67 @@
+/* ============================================================
+   ESTILOS DA PÁGINA DE LORE / HISTÓRIA
+   ============================================================ */
+
+
+/* 1. Ajuste do Fundo e Container Principal */
+.lore-container {
+    padding-top: 100px;    /* Espaço para não sumir atrás do header fixo */
+    padding-bottom: 80px;
+    background-color: #000000; /* Fundo totalmente preto conforme seu pedido */
+    min-height: 100vh;      /* Garante que o fundo preto ocupe a tela toda */
+    width: 100%;
+    display: block;
+}
+
+
+/* 2. O Bloco de Conteúdo (A Coluna Central) */
+.lore-content {
+    max-width: 800px;      /* Limita a largura para o texto não espalhar muito */
+    margin: 0 auto;        /* Centraliza o bloco horizontalmente no meio da tela */
+    padding: 0 20px;       /* Margem interna para o texto não encostar na borda no celular */
+    text-align: center;    /* Centraliza o texto (letras) */
+}
+
+
+/* 3. Estilo dos Títulos (Ato 1, Ato 2, etc) */
+.ato-titulo {
+    color: #ffffff;        /* Letra branca */
+    font-size: 3rem;       /* Letra grande para os temas */
+    margin-top: 60px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    display: block;
+    text-transform: uppercase; /* Deixa em caixa alta para dar impacto */
+    letter-spacing: 2px;   /* Espaçamento entre letras */
+}
+
+
+/* 4. Estilo do Texto da História (Acontecimentos) */
+.lore-texto {
+    color: #ffffff;        /* Letra branca */
+    font-size: 1.25rem;    /* Tamanho confortável para leitura */
+    line-height: 1.8;      /* Espaçamento entre linhas (muito importante) */
+    margin-bottom: 30px;   /* Espaço entre parágrafos */
+    text-align: center;    /* Mantém o texto centralizado como no seu desenho */
+    opacity: 0.9;          /* Suaviza levemente o branco para não cansar a vista */
+}
+
+
+/* 5. Responsividade (Ajustes para Celular) */
+@media (max-width: 600px) {
+    .lore-container {
+        padding-top: 80px;
+    }
+
+
+    .ato-titulo {
+        font-size: 2rem;   /* Diminui um pouco o título no celular */
+    }
+
+
+    .lore-texto {
+        font-size: 1.1rem;
+        text-align: justify; /* Melhora a leitura em telas bem pequenas */
+    }
+}
+
