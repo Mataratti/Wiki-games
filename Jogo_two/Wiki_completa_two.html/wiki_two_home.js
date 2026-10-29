@@ -9,34 +9,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // =======================================
-    // 1. Lógica do Tema Claro/Escuro
+    // 1. Lógica do Tema (Cyberpunk Dark por padrão)
     // =======================================
 
     function applyTheme(isDarkMode) {
         if (isDarkMode) {
-            body.classList.add('dark-mode');
-            themeToggle.textContent = '☀️'; // Exibe o sol
+            body.classList.remove('light-mode'); // Se houver um modo claro customizado
+            themeToggle.textContent = '☀️'; // Exibe o sol para poder voltar ao claro se quiser
             localStorage.setItem('theme', 'dark');
         } else {
-            body.classList.remove('dark-mode');
+            body.classList.add('light-mode'); // Opcional caso queira suportar claro
             themeToggle.textContent = '🌙'; // Exibe a lua
             localStorage.setItem('theme', 'light');
         }
     }
 
-    // Carrega o tema salvo ao carregar a página
+    // Carrega o tema salvo. Como o padrão agora é escuro, definimos 'dark' se não houver preferência salva.
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        applyTheme(true);
+    if (savedTheme === 'light') {
+        applyTheme(false);
     } else {
-        // Aplica o tema claro por padrão e ajusta o ícone
-        applyTheme(false); 
+        // Padrão inicial agora é o tema escuro Cyberpunk
+        applyTheme(true); 
     }
 
     // Adiciona o evento de clique ao botão de tema
     themeToggle.addEventListener('click', () => {
-        const isCurrentlyDark = body.classList.contains('dark-mode');
-        applyTheme(!isCurrentlyDark); // Inverte o tema atual
+        const isCurrentlyLight = body.classList.contains('light-mode');
+        applyTheme(isCurrentlyLight); // Inverte o estado atual
     });
 
 
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // =======================================
 
     menuIcon.addEventListener('click', (event) => {
-        // Impede que o clique no ícone feche o menu imediatamente (veja o próximo evento)
+        // Impede que o clique no ícone feche o menu imediatamente
         event.stopPropagation(); 
         sideMenu.classList.toggle('active');
     });
