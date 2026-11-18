@@ -239,3 +239,168 @@
     font-weight: bold;
 }
 
+/* Estilo geral para o container da página de perfil */
+.user-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* Blocos de exibição padrão */
+.user-display {
+    background-color: rgba(30, 30, 40, 0.6);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Caixa de aviso (💡) */
+.aviso-box {
+    display: flex;
+    align-items: center;
+    background-color: rgba(40, 40, 20, 0.4);
+    border-left: 4px solid #f1c40f;
+    padding: 12px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.icone-lampada {
+    font-size: 20px;
+    margin-right: 12px;
+}
+
+/* Títulos e listas */
+.user-title, .user-classes {
+    margin-bottom: 10px;
+    color: #fff;
+}
+.lista-classes {
+    margin: 10px 0 15px 20px;
+}
+
+/* Cores e destaques das classes/perícias */
+.cor-cavaleiro { color: #3498db; font-weight: bold; }
+.cor-assassino { color: #e74c3c; font-weight: bold; }
+.cor-arqueiro { color: #2ecc71; font-weight: bold; }
+.cor-mago { color: #9b59b6; font-weight: bold; }
+.cor-berserker { color: #d35400; font-weight: bold; }
+.cor-monge { color: #f39c12; font-weight: bold; }
+.cor-invocador { color: #1abc9c; font-weight: bold; }
+.cor-bardo { color: #e84393; font-weight: bold; }
+
+.destaque-verde { color: #2ecc71; font-weight: bold; }
+.destaque-azul { color: #3498db; font-weight: bold; }
+.destaque-normal { color: #f1c40f; font-weight: bold; }
+.destaque-vermelho { color: #e74c3c; font-weight: bold; }
+
+/* --- ESTILO INFOBOX WIKI (Blocos flutuantes à direita) --- */
+.titulo-secao-classes {
+    margin-top: 30px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 5px;
+}
+
+.wiki-section {
+    background-color: rgba(25, 25, 35, 0.8);
+    border: 1px solid #3d4450;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.class-header-wiki {
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px dotted #555;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+/* O Bloco Infobox Lateral */
+.infobox {
+    float: right;
+    width: 280px;
+    margin: 0 0 15px 20px;
+    background-color: #1a1d24;
+    border: 1px solid #4a5568;
+    border-radius: 6px;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.infobox-title {
+    background-color: #2b303c;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 8px;
+}
+
+.infobox-image {
+    background-color: #111;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #4a5568;
+}
+
+.infobox-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.infobox-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.infobox-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #2e3440;
+}
+
+.infobox-label {
+    background-color: #21252b;
+    font-weight: bold;
+    color: #abb2bf;
+    width: 40%;
+}
+
+.infobox-value {
+    color: #fff;
+}
+
+.select-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.select-btn:hover {
+    background-color: #4338ca;
+}
+
+/* Limpeza de flutuação */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 768px) {
+    .infobox {
+        float: none;
+        width: 100%;
+        margin: 0 0 15px 0;
+    }
+}
